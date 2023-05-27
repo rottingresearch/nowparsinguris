@@ -3,7 +3,7 @@ requires = ["hatchling>=1.8.0"]
 build-backend = "hatchling.build"
 
 [project]
-name = "uri-validator"
+name = "uriparser"
 dynamic = ["version"]
 description = "Validate URIs"
 readme = "README.md"

@@ -7,7 +7,7 @@ on:
 
 jobs:
   pypi-build-n-publish:
-    name: linkrot
+    name: urivalidator
     runs-on: [ubuntu-latest]
     steps:
     - uses: actions/checkout@master

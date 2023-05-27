@@ -3,9 +3,9 @@ requires = ["hatchling>=1.8.0"]
 build-backend = "hatchling.build"
 
 [project]
-name = "linkrot"
+name = "urivalidator"
 dynamic = ["version"]
-description = "Extract metadata and URLs from PDF files"
+description = "Validate URIs"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.8"
@@ -16,6 +16,12 @@ keywords = [
     "pdf",
     "reference",
     "linkrot",
+    "link",
+    "rot",
+    "broken",
+    "uri",
+    "url",
+    "validator",
 ]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -54,20 +60,20 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/rottingresearch/linkrot"
+Homepage = "https://github.com/rottingresearch/urivalidator"
 
 [tool.hatch.version]
-path = "linkrot/__init__.py"
+path = "urivalidator/__init__.py"
 
 [tool.hatch.build.targets.sdist]
 include = [
-    "/linkrot",
+    "/urivalidator",
 ]
 
 [tool.hatch.build.targets.wheel]
 packages = [
-    "/linkrot",
+    "/urivalidator",
 ]
 
 [project.scripts]
-linkrot= "linkrot.cli:main"
+urivalidator= "urivalidator.cli:main"

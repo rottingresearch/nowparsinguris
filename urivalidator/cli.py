@@ -10,9 +10,9 @@ import json
 
 from urllib.parse import urlparse
 
-import linkrot
-from linkrot.downloader import check_refs
-from linkrot.archive import archive_links
+import urivalidator
+from urivalidator.downloader import check_refs
+from urivalidator.archive import archive_links
 
 
 # print(sys.version)
@@ -111,7 +111,7 @@ def create_parser():
     parser.add_argument(
         "--version",
         action="version",
-        version="%(prog)s v{version}".format(version=linkrot.__version__),
+        version="%(prog)s v{version}".format(version=urivalidator.__version__),
     )
     return parser
 
@@ -188,12 +188,12 @@ def main():
 
     # Check if file exists
     try:
-        pdf = linkrot.linkrot(args.pdf)
-    except linkrot.exceptions.FileNotFoundError as e:
+        pdf = urivalidator.linkrot(args.pdf)
+    except urivalidator.exceptions.FileNotFoundError as e:
         exit_with_error(ERROR_FILE_NOT_FOUND, str(e))
-    except linkrot.exceptions.DownloadError as e:
+    except urivalidator.exceptions.DownloadError as e:
         exit_with_error(ERROR_DOWNLOAD, str(e))
-    except linkrot.exceptions.PDFInvalidError as e:
+    except urivalidator.exceptions.PDFInvalidError as e:
         exit_with_error(ERROR_PDF_INVALID, str(e))
 
     # Perhaps only output text

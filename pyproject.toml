@@ -7,7 +7,7 @@ name = "uri-validator"
 dynamic = ["version"]
 description = "Validate URIs"
 readme = "README.md"
-license = "GPLv3"
+license = "MIT"
 requires-python = ">=3.8"
 authors = [
     { name = "Marshal Miller", email = "marshal@rottingresearch.org" },
